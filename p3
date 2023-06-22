@@ -1,0 +1,6 @@
+import pandas as pd
+movies_data = pd.read_csv('movies.dat’)
+users_data = pd.read_csv('users.dat’)
+combined_data = pd.merge(user_movie_data, movies_data, on='movie_id’)
+combined_data = pd.merge(combined_data, users_data, on='user_id’)
+print(combined_data.head())
